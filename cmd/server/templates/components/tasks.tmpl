@@ -1,0 +1,22 @@
+{{ define "components/tasks.tmpl" }}
+<div id="task-list" class="content">
+    {{ range .tasks }}
+        <div class="box">
+            {{ .Name }}
+            <button hx-delete="/{{ .Id }}" hx-swap="outerHTML" hx-target="#task-list"class="delete"></button>
+        </div>
+    {{ end }}
+    <form hx-post="/" hx-swap="outerHTML" hx-target="#task-list">
+        <div class="field is-grouped">
+            <p class="control is expanded">
+                <input name="task" class="input" type="text" placeholder="task"
+                required
+                >
+            </p>
+            <p class="control">
+                <button type="submit" class="button is-primary">Create</button>
+            </p>
+        </div>
+    </form>
+</div>
+{{ end }}

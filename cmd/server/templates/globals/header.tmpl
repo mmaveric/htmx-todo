@@ -1,0 +1,23 @@
+{{ define "globals/header.tmpl" }}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- htmx -->
+        <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+
+        <!-- bulma -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <title>{{ .title }}</title>
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+                <header class="title">
+                    <h1>{{ .title }}</h1>
+                </header>
+            </div>
+        </section>
+{{ end }}
